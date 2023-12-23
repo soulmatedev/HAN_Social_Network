@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="86d97fb12bd04b6e965be43bb45e9252" Name="Diagram1">
+        <EntityTypeShape EntityType="HANModel.Account" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HANModel.Comment" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="HANModel.Mark" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HANModel.Post" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HANModel.Raiting" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="HANModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="HANModel.FK__Comment__text__3F6663D5" ManuallyRouted="false" />
+        <AssociationConnector Association="HANModel.FK__Post__descriptio__3C89F72A" ManuallyRouted="false" />
+        <AssociationConnector Association="HANModel.FK__Raiting__account__46136164" ManuallyRouted="false" />
+        <AssociationConnector Association="HANModel.FK__Comment__postID__405A880E" ManuallyRouted="false" />
+        <AssociationConnector Association="HANModel.FK__Raiting__mark__451F3D2B" ManuallyRouted="false" />
+        <AssociationConnector Association="HANModel.FK__Raiting__postID__4707859D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
