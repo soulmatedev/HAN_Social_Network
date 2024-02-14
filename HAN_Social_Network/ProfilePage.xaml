@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ProfilePage">
 
-    <Grid Background="White">
+    <Grid Background="GhostWhite">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -52,23 +52,23 @@
                 Профиль
             </TextBlock>
 
-            <StackPanel Grid.Row="1" >
-                <TextBlock Text="Имя пользователя" FontWeight="Bold" FontSize="12" Margin="0 0 0 4"/>
+                <StackPanel Grid.Row="1">
+                    <TextBlock HorizontalAlignment="Left" Text="Имя пользователя" FontWeight="Bold" FontSize="12" Margin="0 0 0 4"/>
                     <TextBlock Name ="tbUsername" Text="{Binding username}"></TextBlock>
                 </StackPanel>
 
-            <StackPanel Grid.Row="2">
-                <TextBlock Text="ФИО" FontWeight="Bold" FontSize="12" Margin="0 0 0 4"/>
+                <StackPanel Grid.Row="2">
+                    <TextBlock Text="ФИО" FontWeight="Bold" FontSize="12" Margin="0 0 0 4"/>
                     <TextBlock Name ="tbFullName" Text="{Binding fullname}"></TextBlock>
                 </StackPanel>
 
             <StackPanel Grid.Row="3">
                 <TextBlock  Text="Дата рождения: " FontWeight="Bold" FontSize="12" Margin="0 0 0 4"/>
-                    <TextBlock Name ="tbBirthday" Text="{Binding birthday}"></TextBlock>
+                    <TextBlock Margin="0 0 0 4" Name ="tbBirthday" Text="{Binding birthday}"></TextBlock>
                 </StackPanel>
 
             <StackPanel Grid.Row="4">
-                <Button Height="20" Width="100" Background="LightSkyBlue" HorizontalAlignment="Left">
+                <Button Click="OnClickEdit" Height="20" Width="100" Background="LightSkyBlue" HorizontalAlignment="Left">
                     Редактировать
                 </Button>
             </StackPanel>
@@ -86,13 +86,28 @@
                 Grid.Row="1"
                 Height="20"
                 Width="150"
-                Background="LightSkyBlue"
+                Background="LightSkyBlue" Click="Button_Click"
             >
                 Добавить пост
             </Button>
 
-            <ListView Grid.Row="0" Margin="20 20 20 0">
-                
+            <ListView Name="lvAccounts"  Margin="5" SelectionChanged="lvAccounts_SelectionChanged" Background="GhostWhite">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>                     
+                            <Run Text="Заголовок:"/>                 
+                            <Run Text="{Binding title}"/>
+                        
+                        <LineBreak />
+                        
+                            <Run Text="Описание:"/>
+                            <Run Text="{Binding description}"/>
+                      
+                        <LineBreak />
+
+                        </TextBlock>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </Grid>
        

@@ -53,5 +53,32 @@ namespace HAN_Social_Network
                 return profilePage;
             }
         }
+
+        private static UserEdit userEdit;
+        public static UserEdit UserEdit
+        {
+            get
+            {
+                if (userEdit == null)
+                {
+                    userEdit = new UserEdit();
+                }
+                return userEdit;
+            }
+        }
+
+        private static CreatePostPage createPostPage;
+        public static CreatePostPage CreatePostPage
+        {
+            get
+            {
+                if (createPostPage == null)
+                {
+                    createPostPage = new CreatePostPage(AccountId);
+                }
+                return createPostPage;
+            }
+        }
+
     }
 }
