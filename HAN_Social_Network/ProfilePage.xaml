@@ -39,6 +39,7 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Background="LightSkyBlue"
+                Click="NavigateToNewsFeed"
                 >
                     На главную
                 </Button>

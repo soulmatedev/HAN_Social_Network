@@ -78,5 +78,10 @@ namespace HAN_Social_Network
         {
 
         }
+
+        private void NavigateToNewsFeed(object sender, RoutedEventArgs e)
+        {
+            MainWindow.pageContainer.Navigate(PageController.NewsFeed);
+        }
     }
 }

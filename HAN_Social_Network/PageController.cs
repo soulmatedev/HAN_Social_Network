@@ -80,5 +80,18 @@ namespace HAN_Social_Network
             }
         }
 
+        private static NewsFeed newsFeed;
+        public static NewsFeed NewsFeed
+        {
+            get
+            {
+                if(newsFeed == null)
+                {
+                    newsFeed = new NewsFeed();
+                }
+                return newsFeed;
+            }
+        }
+
     }
 }

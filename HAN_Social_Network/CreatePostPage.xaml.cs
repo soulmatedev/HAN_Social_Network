@@ -56,5 +56,22 @@ namespace HAN_Social_Network
             MainWindow.pageContainer.Navigate(PageController.ProfilePage);
             PageController.ProfilePage.UpdatePage();
         }
+
+        private void tbDescription_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            double contendHeight = textBox.DesiredSize.Height;
+            double maxHeight = textBox.MaxHeight;
+            if (contendHeight >= maxHeight)
+            {
+                textBox.Height = maxHeight;
+            }
+            else
+            {
+                textBox.Height = double.NaN;
+            }
+        }
+
+
     }
 }

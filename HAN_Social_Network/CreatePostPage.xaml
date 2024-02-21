@@ -28,9 +28,10 @@
                     <TextBlock FontSize="10" Text="Заголовок" Margin="0 0 0 4"/>
                     <TextBox Text="{Binding tbTitle}" Name="tbTitle" Margin="0 0 0 8"/>
 
-                    <TextBlock FontSize="10" Text="Содержимое поста" Margin="0 0 0 4"/>
-                    <TextBox Text="{Binding tbDescription}" Name="tbDescription" Margin="0 0 0 8" Height="294"/>
-                    
+                    <TextBlock  FontSize="10" Text="Содержимое поста" Margin="0 0 0 4"/>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBox TextWrapping="Wrap" AcceptsReturn="True"  Text="{Binding tbDescription}" Name="tbDescription" Margin="0 0 0 8" Height="40" TextChanged="tbDescription_TextChanged"/>
+                    </ScrollViewer>
                 </StackPanel>
                 <Button FontSize="10" Click="addPostClick" Background="LightSkyBlue" Content="Создать"/>
             </StackPanel>
