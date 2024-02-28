@@ -67,6 +67,9 @@
     <Compile Include="CreatePostPage.xaml.cs">
       <DependentUpon>CreatePostPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditPostPage.xaml.cs">
+      <DependentUpon>EditPostPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NewsFeed.xaml.cs">
       <DependentUpon>NewsFeed.xaml</DependentUpon>
     </Compile>
@@ -85,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreatePostPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditPostPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

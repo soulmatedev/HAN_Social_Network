@@ -92,7 +92,7 @@
                 Добавить пост
             </Button>
 
-            <ListView Name="lvAccounts"  Margin="5" SelectionChanged="lvAccounts_SelectionChanged" Background="GhostWhite">
+            <ListView Name="lvAccounts"  Margin="5" Background="GhostWhite">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>                     
@@ -105,7 +105,8 @@
                             <Run Text="{Binding description}"/>
                       
                         <LineBreak />
-
+                      
+                        <Button Click="OnClickEditPost">Редактировать</Button>
                         </TextBlock>
                     </DataTemplate>
                 </ListView.ItemTemplate>

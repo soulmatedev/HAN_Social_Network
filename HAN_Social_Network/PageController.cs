@@ -93,5 +93,19 @@ namespace HAN_Social_Network
             }
         }
 
+        private static EditPostPage editPostPage;
+        public static EditPostPage EditPostPage
+        {
+            get
+            {
+                if (editPostPage == null)
+                {
+                    editPostPage = new EditPostPage();
+                }
+                return editPostPage;
+            }
+        }
+
+
     }
 }

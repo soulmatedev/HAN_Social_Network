@@ -49,28 +49,21 @@
             <ListView Name="lvPosts"  Margin="5,5,5,5"  Background="GhostWhite">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
+                            <TextBlock>                     
+                            <Run Text="Заголовок:"/>                 
+                            <Run Text="{Binding title}"/>                         
+                        
+                        <LineBreak />                                                     
+                        
+                            <Run Text="Описание:"/>
+                            <Run Text="{Binding description}"/>
+                      
+                        <LineBreak />
+                                     
+                        <Button>+</Button>
+                        
 
-                                <StackPanel Grid.Column="0">
-                                    <TextBlock Text="Заголовок:"/>
-                                    <TextBlock Text="{Binding title}"/>
-
-                                    <TextBlock Text="Описание:"/>
-                                    <TextBlock Text="{Binding description}"/>
-                                </StackPanel>
-                                <TextBlock> 
-                                    
-                                 <StackPanel>
-                                         <Button>+</Button>
-                                         <Button>-</Button>
-                                 </StackPanel>   
-
-                                </TextBlock>
-                            </Grid>
+                            </TextBlock>
                         </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

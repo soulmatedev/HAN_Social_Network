@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace HAN_Social_Network
 {
-    /// <summary>
-    /// Логика взаимодействия для NewsFeed.xaml
-    /// </summary>
     public partial class NewsFeed : Page
     {
         public static ObservableCollection<Database.Account> Accounts { get; set; }

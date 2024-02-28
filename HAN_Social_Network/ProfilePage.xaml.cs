@@ -31,13 +31,19 @@ namespace HAN_Social_Network
             UpdatePage();
         }
 
-        public Database.Account GetSelected()
+        public Database.Account GetSelectedAccount()
         {
             return MainWindow.connection.Accounts.FirstOrDefault(x => x.username == tbUsername.Text);
         }
+
+        public Database.Post GetSelectedPost()
+        {
+            return lvAccounts.SelectedItem as Database.Post;
+        }
+
         private void OnClickEdit(object sender, RoutedEventArgs e)
         {
-            var selectedAccount = GetSelected();
+            var selectedAccount = GetSelectedAccount();
             PageController.UserEdit.SetAccount(selectedAccount);
             MainWindow.pageContainer.Navigate(PageController.UserEdit);
         }
@@ -74,14 +80,16 @@ namespace HAN_Social_Network
             lvAccounts.SetBinding(ListView.ItemsSourceProperty, binding);
         }
 
-        private void lvAccounts_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void NavigateToNewsFeed(object sender, RoutedEventArgs e)
         {
             MainWindow.pageContainer.Navigate(PageController.NewsFeed);
+        }
+
+        private void OnClickEditPost(object sender, RoutedEventArgs e)
+        {
+            var selectedPost = GetSelectedPost();
+            PageController.EditPostPage.SetPost(selectedPost);
+            MainWindow.pageContainer.Navigate(PageController.EditPostPage);
         }
     }
 }

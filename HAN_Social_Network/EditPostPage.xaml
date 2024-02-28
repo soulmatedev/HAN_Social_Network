@@ -1,0 +1,33 @@
+﻿<Page x:Class="HAN_Social_Network.EditPostPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HAN_Social_Network"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditPostPage">
+
+    <Grid Background="GhostWhite">
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Width="320">
+            <StackPanel Margin="0 0 0 12">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="18" FontWeight="Bold" Opacity="0.8" Text="Изменение" Grid.Column="0"/>
+                    <Button Content="Назад" Grid.Column="1" Width="80" HorizontalAlignment="Right" Click="GoBack" Background="LightSkyBlue"/>
+                </Grid>
+            </StackPanel>
+            <Label Content="Заголовок"></Label>
+            <TextBox Text="{Binding title}"></TextBox>
+            <Label Content="Описание"></Label>
+            <TextBox TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding description}" Name="description" Margin="0 0 0 8" Height="40" TextChanged="description_TextChanged"></TextBox>
+
+            <Button Click="OnSave" Content="Сохранить" Margin="0 10 0 0" Background="LightSkyBlue"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
