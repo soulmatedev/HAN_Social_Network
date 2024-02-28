@@ -92,26 +92,10 @@
                 Добавить пост
             </Button>
 
-            <ListView Name="lvAccounts"  Margin="5" Background="GhostWhite">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock>                     
-                            <Run Text="Заголовок:"/>                 
-                            <Run Text="{Binding title}"/>
-                        
-                        <LineBreak />
-                        
-                            <Run Text="Описание:"/>
-                            <Run Text="{Binding description}"/>
-                      
-                        <LineBreak />
-                      
-                        <Button Click="OnClickEditPost">Редактировать</Button>
-                        </TextBlock>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+            <ListView HorizontalContentAlignment="Stretch"  Name="lvAccounts"  Margin="5" Background="GhostWhite">
+              
             </ListView>
+           
         </Grid>
-       
     </Grid>
 </Page>

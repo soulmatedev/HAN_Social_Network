@@ -36,10 +36,10 @@ namespace HAN_Social_Network
             return MainWindow.connection.Accounts.FirstOrDefault(x => x.username == tbUsername.Text);
         }
 
-        public Database.Post GetSelectedPost()
-        {
-            return lvAccounts.SelectedItem as Database.Post;
-        }
+        //public Database.Post GetSelectedPost()
+        //{
+        //    return lvAccounts. as Database.Post;
+        //}
 
         private void OnClickEdit(object sender, RoutedEventArgs e)
         {
@@ -74,10 +74,9 @@ namespace HAN_Social_Network
             var posts = MainWindow.connection.Posts.Where(x => x.accountID == idAccount);
             foreach (var post in posts)
             {
-                Post.Add(post);
+                PostFrame postFrame = new PostFrame(post.title, post.description);
+                lvAccounts.Items.Add(postFrame);
             }
-            binding.Source = Post;
-            lvAccounts.SetBinding(ListView.ItemsSourceProperty, binding);
         }
 
         private void NavigateToNewsFeed(object sender, RoutedEventArgs e)
@@ -87,9 +86,9 @@ namespace HAN_Social_Network
 
         private void OnClickEditPost(object sender, RoutedEventArgs e)
         {
-            var selectedPost = GetSelectedPost();
-            PageController.EditPostPage.SetPost(selectedPost);
-            MainWindow.pageContainer.Navigate(PageController.EditPostPage);
+            //var selectedPost = GetSelectedPost();
+            //PageController.EditPostPage.SetPost(selectedPost);
+            //MainWindow.pageContainer.Navigate(PageController.EditPostPage);
         }
     }
 }
