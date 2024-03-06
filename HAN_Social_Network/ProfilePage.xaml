@@ -69,7 +69,7 @@
                 </StackPanel>
 
             <StackPanel Grid.Row="4">
-                <Button Click="OnClickEdit" Height="20" Width="100" Background="LightSkyBlue" HorizontalAlignment="Left">
+                    <Button Click="OnClickEdit" Height="20" Width="100" Background="LightSkyBlue" HorizontalAlignment="Left">
                     Редактировать
                 </Button>
             </StackPanel>
@@ -92,7 +92,7 @@
                 Добавить пост
             </Button>
 
-            <ListView HorizontalContentAlignment="Stretch"  Name="lvAccounts"  Margin="5" Background="GhostWhite">
+            <ListView HorizontalContentAlignment="Stretch"  Name="lvAccounts"  Margin="5" Background="GhostWhite" SelectionChanged="lvAccounts_SelectionChanged">
               
             </ListView>
            

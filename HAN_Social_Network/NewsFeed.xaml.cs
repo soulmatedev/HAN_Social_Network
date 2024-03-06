@@ -45,12 +45,17 @@ namespace HAN_Social_Network
             test.Source = Accounts;
 
             var posts = MainWindow.connection.Posts;
+            lvPosts.Items.Clear();
             foreach (var post in posts)
             {
-                Post.Add(post);
+                GeneralPostFrame postFrame = new GeneralPostFrame(post);
+                lvPosts.Items.Add(postFrame);
             }
-            binding.Source = Post;
-            lvPosts.SetBinding(ListView.ItemsSourceProperty, binding);
+        }
+
+        private void lvPosts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

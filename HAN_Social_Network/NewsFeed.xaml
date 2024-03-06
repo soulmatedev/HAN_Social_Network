@@ -46,26 +46,8 @@
 
         <Grid Grid.Column="1">
             <ScrollViewer>
-            <ListView Name="lvPosts"  Margin="5,5,5,5"  Background="GhostWhite">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock>                     
-                            <Run Text="Заголовок:"/>                 
-                            <Run Text="{Binding title}"/>                         
-                        
-                        <LineBreak />                                                     
-                        
-                            <Run Text="Описание:"/>
-                            <Run Text="{Binding description}"/>
-                      
-                        <LineBreak />
-                                     
-                        <Button>+</Button>
-                        
-
-                            </TextBlock>
-                        </DataTemplate>
-                </ListView.ItemTemplate>
+                <ListView  HorizontalContentAlignment="Stretch" Name="lvPosts"  Margin="5,5,5,5"  Background="GhostWhite" SelectionChanged="lvPosts_SelectionChanged">
+                   
             </ListView>
             </ScrollViewer>
         </Grid>

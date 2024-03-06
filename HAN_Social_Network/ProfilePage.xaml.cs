@@ -72,23 +72,22 @@ namespace HAN_Social_Network
             tbBirthday.Text = account.birthday.ToShortDateString();
 
             var posts = MainWindow.connection.Posts.Where(x => x.accountID == idAccount);
+            lvAccounts.Items.Clear();
             foreach (var post in posts)
             {
-                PostFrame postFrame = new PostFrame(post.title, post.description);
+                PostFrame postFrame = new PostFrame(post);
                 lvAccounts.Items.Add(postFrame);
             }
         }
-
+       
         private void NavigateToNewsFeed(object sender, RoutedEventArgs e)
         {
-            MainWindow.pageContainer.Navigate(PageController.NewsFeed);
+            NavigationService.Navigate(PageController.NewsFeed);
         }
 
-        private void OnClickEditPost(object sender, RoutedEventArgs e)
+        private void lvAccounts_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //var selectedPost = GetSelectedPost();
-            //PageController.EditPostPage.SetPost(selectedPost);
-            //MainWindow.pageContainer.Navigate(PageController.EditPostPage);
+
         }
     }
 }

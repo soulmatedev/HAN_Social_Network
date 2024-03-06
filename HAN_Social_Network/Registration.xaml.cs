@@ -45,5 +45,9 @@ namespace HAN_Social_Network
             MainWindow.connection.Accounts.Add(Account);
             MainWindow.connection.SaveChanges();
         }
+        private void GoBack(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

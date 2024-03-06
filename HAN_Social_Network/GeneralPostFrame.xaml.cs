@@ -1,5 +1,4 @@
-﻿using Database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,11 +15,13 @@ using System.Windows.Shapes;
 
 namespace HAN_Social_Network
 {
-   
-    public partial class PostFrame : UserControl
+    /// <summary>
+    /// Логика взаимодействия для GeneralPostFrame.xaml
+    /// </summary>
+    public partial class GeneralPostFrame : UserControl
     {
         private Database.Post post { get; set; }
-        public PostFrame(Post post)
+        public GeneralPostFrame(Database.Post post)
         {
             InitializeComponent();
             tbTitle.Text = post.title;
@@ -30,10 +31,7 @@ namespace HAN_Social_Network
 
         private void OnClickEditPost(object sender, RoutedEventArgs e)
         {
-            PageController.EditPostPage.SetPost(this.post);
-            MainWindow.pageContainer.Navigate(PageController.EditPostPage);
 
         }
-        
     }
 }
