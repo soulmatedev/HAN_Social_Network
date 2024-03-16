@@ -9,7 +9,7 @@
              d:DesignHeight="35" d:DesignWidth="300">
     <Grid Background="GhostWhite">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="285"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0" Margin="4">
@@ -29,12 +29,24 @@
             <Button 
                 Background="LightSkyBlue" 
                 VerticalAlignment="Top"
-                HorizontalAlignment="Right" 
-                Height="20"
+                HorizontalAlignment="Right"
+                Height="18"
+                Width="100"
                 Click="OnClickEditPost"
                 >
                 Редактировать
             </Button>
+            <Button 
+                Background="LightSkyBlue" 
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right" 
+                Height="18"
+                Width="100"
+                Click="OnClickDeletePost"
+                >
+                Удалить
+            </Button>
+
         </Grid>
 
     </Grid>

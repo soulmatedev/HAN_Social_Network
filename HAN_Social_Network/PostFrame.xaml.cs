@@ -34,6 +34,12 @@ namespace HAN_Social_Network
             MainWindow.pageContainer.Navigate(PageController.EditPostPage);
 
         }
-        
+
+        private void OnClickDeletePost(object sender, RoutedEventArgs e)
+        {
+            MainWindow.connection.Posts.Remove(this.post);
+            MainWindow.connection.SaveChanges();
+            PageController.ProfilePage.UpdatePage();
+        }
     }
 }
